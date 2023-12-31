@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <menu id="nav" class="openSidebar-reverse">
+        <h1>Vinnie<span>Moth</span></h1>
+        <div class="links">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Projects</a>
+          <a href="">Contact</a>
+        </div>
+        <div class="social">
+          <i data-feather="instagram"></i>
+          <i data-feather="twitter"></i>
+          <i data-feather="github"></i>
+          <i data-feather="linkedin"></i>
+        </div>
+      </menu>
+      <header>
+        <h1 id="button">☰</h1>
+      </header>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+    <script defer src="./src/app.js"></script>
+  </body>
+</html>

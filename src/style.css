@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+
+:root {
+  --primary-color: #a00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #222;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 100vh;
+  background-color: #fff;
+  animation: openSidebar forwards 1s;
+}
+
+span {
+  color: var(--primary-color);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  font-size: 26px;
+  text-decoration: none;
+  margin: 10px;
+  color: #222;
+}
+.links a:hover {
+  color: var(--primary-color);
+}
+
+#button {
+  color: var(--primary-color);
+  position: absolute;
+  cursor: pointer;
+  margin: 20px;
+  right: 0;
+}
+
+.openSidebar {
+  animation: openSidebar forwards 1s;
+}
+
+.openSidebar-reverse {
+  animation: openSidebar-reverse forwards 1s;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+svg {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+svg:hover {
+  scale: 1.2;
+  transition: 0.2s;
+}
+
+.active {
+  display: flex;
+}
+
+@keyframes openSidebar {
+  0% {
+    transform: translateX(-500px);
+  }
+  99% {
+    display: none;
+  }
+  100% {
+    display: flex;
+    transform: translateX(0);
+  }
+}
+
+@keyframes openSidebar-reverse {
+  0% {
+    transform: translateX(0);
+  }
+  99% {
+    display: flex;
+  }
+  100% {
+    display: none;
+    transform: translateX(-500px);
+  }
+}
